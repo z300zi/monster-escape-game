@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-fullscreen">
+    <title>Monster Escape - Survive The Horror!</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Run from terrifying monsters, defeat epic bosses, and survive in this thrilling survival arena! Features power-ups, combo system, and intense boss battles.">
+    <meta name="keywords" content="monster game, survival game, html5 game, phaser game, boss battle, arcade game, browser game, horror game">
+    <meta name="author" content="Monster Escape Team">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Monster Escape - Survive The Horror!">
+    <meta property="og:description" content="Run from monsters and defeat epic bosses in this thrilling survival game!">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/000510/00ff00?text=Monster+Escape">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Monster Escape - Survive The Horror!">
+    <meta property="twitter:description" content="Survive waves of monsters and epic boss battles!">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👾</text></svg>">
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            touch-action: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        
+        #game-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        canvas {
+            display: block;
+            box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            max-width: 100%;
+            max-height: 100vh;
+        }
+        
+        /* إخفاء شريط العنوان في الجوالات */
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            canvas {
+                border: none;
+                border-radius: 0;
+                width: 100vw !important;
+                height: 100vh !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container"></div>
+    <script src="game.js"></script>
+</body>
+</html>
